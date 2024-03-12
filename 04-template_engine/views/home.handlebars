@@ -1,2 +1,15 @@
 <h1>Olá Handlebars</h1>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure totam quis placeat pariatur ab facere rerum natus ut officiis aliquid fugiat vitae, obcaecati deserunt ullam architecto sapiente similique ad ipsam sunt harum necessitatibus nisi tenetur. Veritatis nesciunt exercitationem voluptatibus, laboriosam esse quasi ducimus dolorum aliquam praesentium officia. Animi, veritatis sit!</p>
+
+<h2>Olá {{user.name}} {{user.surname}}, você tem {{user.age}} anos,  seja bem-vindos!</h2>
+
+<h3>Sabemos que você atua profissionalmente como {{work}}</h3>
+
+{{#if auth}}
+<p>Você está autenticado no sistema Maravilhoso ❤🧡💛 <a href="/dashboard">Clique aqui</a> para acessar a área de membros 😏</p>
+{{/if}}
+
+{{#if approved}}
+    <p>Parabéns {{user.name}}, você têm crédito aprovado!🤑💸💲</p>
+{{else}}
+    <p>Que pena {{user.name}}!😪 Você não tem crédito aprovado 👎</p>
+{{/if}}
